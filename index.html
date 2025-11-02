@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="https://static.readdy.ai/static/e.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Supplements - Preorder</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#3b82f6',secondary:'#1e40af'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gotham:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body { font-family: 'Gotham', Arial, sans-serif; }
+        .ingredients-popup { transform: translateX(-100%); transition: transform 0.3s ease; }
+        .ingredients-popup.active { transform: translateX(0); }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="max-w-sm mx-auto bg-white relative">
+        <div class="ingredients-popup fixed top-0 left-0 w-80 h-full bg-white border-r border-gray-200 z-50 p-4 overflow-y-auto">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="text-lg font-semibold">Ingredients</h3>
+                <button id="closeIngredients" class="w-6 h-6 flex items-center justify-center">
+                    <i class="ri-close-line text-gray-600"></i>
+                </button>
+            </div>
+            <div class="text-sm text-gray-600 mb-4">(separate popup) ingredient list NOT photo</div>
+            <div class="space-y-3">
+                <div class="flex justify-between">
+                    <span>Vitamin D3</span>
+                    <span class="text-gray-500">25μg</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>Omega-3 Fish Oil</span>
+                    <span class="text-gray-500">1000mg</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>Collagen Peptides</span>
+                    <span class="text-gray-500">5g</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>Vitamin C</span>
+                    <span class="text-gray-500">80mg</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>Zinc</span>
+                    <span class="text-gray-500">10mg</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>Magnesium</span>
+                    <span class="text-gray-500">200mg</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>B-Complex</span>
+                    <span class="text-gray-500">100mg</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>Probiotics</span>
+                    <span class="text-gray-500">10 billion CFU</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-4 space-y-4">
+            <div class="flex gap-2">
+                <button id="ingredientsBtn" class="px-4 py-2 border border-gray-300 rounded-button text-sm whitespace-nowrap">
+                    Ingredients
+                </button>
+                <button class="px-4 py-2 bg-gray-100 rounded-button text-sm whitespace-nowrap flex-1">
+                    popup ingredient Preorder
+                </button>
+            </div>
+
+            <div class="space-y-4">
+                <div class="grid grid-cols-4 gap-2">
+                    <div class="aspect-square bg-gray-100 rounded border"></div>
+                    <div class="aspect-square bg-gray-100 rounded border"></div>
+                    <div class="aspect-square bg-gray-100 rounded border"></div>
+                    <div class="aspect-square bg-gray-100 rounded border"></div>
+                </div>
+                
+                <div class="flex justify-center gap-1">
+                    <div class="w-2 h-2 rounded-full bg-primary cursor-pointer" data-slide="0"></div>
+                    <div class="w-2 h-2 rounded-full bg-gray-300 cursor-pointer" data-slide="1"></div>
+                    <div class="w-2 h-2 rounded-full bg-gray-300 cursor-pointer" data-slide="2"></div>
+                    <div class="w-2 h-2 rounded-full bg-gray-300 cursor-pointer" data-slide="3"></div>
+                    <div class="w-2 h-2 rounded-full bg-gray-300 cursor-pointer" data-slide="4"></div>
+                </div>
+                
+                <div class="text-center text-sm">10 packs →</div>
+            </div>
+
+            <div class="space-y-2">
+                <h3 class="font-semibold">What you'll get</h3>
+                <ul class="text-sm space-y-1">
+                    <li>• Antioxidants • Fish oil</li>
+                    <li>• Bioavailable • Vitamin C</li>
+                    <li>• Collagen • So last long</li>
+                </ul>
+            </div>
+
+            <button class="w-full py-3 bg-gray-100 rounded-button text-sm whitespace-nowrap">
+                Preorder
+            </button>
+
+            <button class="w-full py-3 bg-gray-100 rounded-button text-sm whitespace-nowrap">
+                Enter giveaway
+            </button>
+
+            <div class="flex gap-2">
+                <button class="flex-1 py-3 bg-gray-800 text-white rounded-button text-sm whitespace-nowrap">
+                    Preorder checkout
+                </button>
+                <button class="flex-1 py-3 bg-primary text-white rounded-button text-sm whitespace-nowrap">
+                    Quick checkout
+                </button>
+            </div>
+
+            <div class="flex gap-2">
+                <button class="flex-1 py-2 border border-gray-300 rounded-button text-sm whitespace-nowrap">
+                    Shop
+                </button>
+                <button class="flex-1 py-2 border border-gray-300 rounded-button text-sm whitespace-nowrap">
+                    Pages
+                </button>
+            </div>
+
+            <div class="space-y-2">
+                <div class="text-sm font-medium">Credit card</div>
+                <input type="text" placeholder="1234 5678 9012 3456" class="w-full p-3 border border-gray-300 rounded text-sm">
+                <input type="text" placeholder="Address" class="w-full p-3 border border-gray-300 rounded text-sm">
+            </div>
+
+            <div class="flex items-center gap-2 text-sm">
+                <span>Immune Health</span>
+                <span class="px-2 py-1 bg-gray-100 rounded">GH-F</span>
+                <span>Heart health</span>
+                <span>→</span>
+            </div>
+
+            <div class="text-xs text-gray-600 leading-relaxed">
+                We are AI as One Solution with 60+ ingredients for a reasonable price. We promise great quality and honesty.
+            </div>
+
+            <div class="text-sm font-medium">Some Honest Facts about UK supplementation</div>
+
+            <div class="grid grid-cols-2 gap-2">
+                <div class="border border-gray-300 rounded p-3 space-y-1">
+                    <div class="font-medium">1</div>
+                    <div class="text-xs">• Quality varies significantly</div>
+                    <div class="text-xs">• Price doesn't equal quality</div>
+                    <div class="text-xs">• Many contain fillers</div>
+                </div>
+                <div class="border border-gray-300 rounded p-3 space-y-1">
+                    <div class="font-medium">2</div>
+                    <div class="text-xs">• Bioavailability matters</div>
+                    <div class="text-xs">• Timing of intake crucial</div>
+                    <div class="text-xs">• Interactions with food</div>
+                </div>
+                <div class="border border-gray-300 rounded p-3 space-y-1">
+                    <div class="font-medium">3</div>
+                    <div class="text-xs">• Third-party testing rare</div>
+                    <div class="text-xs">• Label accuracy issues</div>
+                    <div class="text-xs">• Regulatory gaps exist</div>
+                </div>
+                <div class="border border-gray-300 rounded p-3 space-y-1">
+                    <div class="font-medium">4</div>
+                    <div class="text-xs">• Individual needs vary</div>
+                    <div class="text-xs">• One size fits all myth</div>
+                    <div class="text-xs">• Consultation recommended</div>
+                </div>
+            </div>
+
+            <div class="space-y-2">
+                <div class="text-sm font-medium">Founders Note</div>
+                <div class="border border-gray-300 rounded p-3 text-xs text-gray-600">
+                    Where my journey started, what helped me and how long it took. After years of struggling with inconsistent energy levels and poor sleep quality, I discovered the power of targeted supplementation. It took 18 months of research and testing to find the right combination that actually worked.
+                </div>
+            </div>
+
+            <div class="space-y-2">
+                <div class="text-sm font-medium">Our progress increased</div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                    <div class="bg-primary h-2 rounded-full" style="width: 68%"></div>
+                </div>
+                <div class="flex justify-between text-xs text-gray-600">
+                    <span>3 visitors</span>
+                    <span>68%</span>
+                </div>
+                <div class="text-xs text-primary">Most low</div>
+            </div>
+
+            <div class="space-y-2">
+                <div class="text-sm font-medium">Enter a Giveaway</div>
+                <input type="email" placeholder="Enter your Email address" class="w-full p-3 border border-gray-300 rounded text-sm">
+                <div class="text-xs text-gray-500">*No Spam/Unsubscribe</div>
+            </div>
+
+            <div class="space-y-2">
+                <div class="text-sm font-medium">Frequently asked Questions</div>
+                
+                <div class="faq-item border border-gray-300 rounded">
+                    <button class="w-full flex justify-between items-center p-3 text-left text-sm">
+                        <span>Question 1</span>
+                        <i class="ri-add-line faq-icon"></i>
+                    </button>
+                    <div class="faq-content hidden px-3 pb-3 text-xs text-gray-600">
+                        How long does shipping take? We typically ship within 24-48 hours and delivery takes 3-5 business days within the UK.
+                    </div>
+                </div>
+
+                <div class="faq-item border border-gray-300 rounded">
+                    <button class="w-full flex justify-between items-center p-3 text-left text-sm">
+                        <span>Question 2</span>
+                        <i class="ri-add-line faq-icon"></i>
+                    </button>
+                    <div class="faq-content hidden px-3 pb-3 text-xs text-gray-600">
+                        Are your supplements third-party tested? Yes, all our products undergo rigorous third-party testing for purity and potency.
+                    </div>
+                </div>
+
+                <div class="faq-item border border-gray-300 rounded">
+                    <button class="w-full flex justify-between items-center p-3 text-left text-sm">
+                        <span>Question 3</span>
+                        <i class="ri-add-line faq-icon"></i>
+                    </button>
+                    <div class="faq-content hidden px-3 pb-3 text-xs text-gray-600">
+                        Can I take these with other medications? We recommend consulting with your healthcare provider before starting any new supplement regimen.
+                    </div>
+                </div>
+
+                <div class="faq-item border border-gray-300 rounded">
+                    <button class="w-full flex justify-between items-center p-3 text-left text-sm">
+                        <span>Question 4</span>
+                        <i class="ri-add-line faq-icon"></i>
+                    </button>
+                    <div class="faq-content hidden px-3 pb-3 text-xs text-gray-600">
+                        What's your return policy? We offer a 30-day money-back guarantee if you're not completely satisfied with your purchase.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script id="ingredients-popup">
+        document.addEventListener('DOMContentLoaded', function() {
+            const ingredientsBtn = document.getElementById('ingredientsBtn');
+            const closeIngredients = document.getElementById('closeIngredients');
+            const popup = document.querySelector('.ingredients-popup');
+
+            ingredientsBtn.addEventListener('click', function() {
+                popup.classList.add('active');
+            });
+
+            closeIngredients.addEventListener('click', function() {
+                popup.classList.remove('active');
+            });
+        });
+    </script>
+
+    <script id="pagination-dots">
+        document.addEventListener('DOMContentLoaded', function() {
+            const dots = document.querySelectorAll('[data-slide]');
+            
+            dots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    dots.forEach(d => d.classList.remove('bg-primary'));
+                    dots.forEach(d => d.classList.add('bg-gray-300'));
+                    this.classList.remove('bg-gray-300');
+                    this.classList.add('bg-primary');
+                });
+            });
+        });
+    </script>
+
+    <script id="faq-accordion">
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const button = item.querySelector('button');
+                const content = item.querySelector('.faq-content');
+                const icon = item.querySelector('.faq-icon');
+                
+                button.addEventListener('click', function() {
+                    const isOpen = !content.classList.contains('hidden');
+                    
+                    if (isOpen) {
+                        content.classList.add('hidden');
+                        icon.classList.remove('ri-subtract-line');
+                        icon.classList.add('ri-add-line');
+                    } else {
+                        content.classList.remove('hidden');
+                        icon.classList.remove('ri-add-line');
+                        icon.classList.add('ri-subtract-line');
+                    }
+                });
+            });
+        });
+    </script>
+<script>
+    !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous", p.async = !0, p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+    posthog.init('phc_t9tkQZJiyi2ps9zUYm8TDsL6qXo4YmZx0Ot5rBlAlEd', {
+        api_host: 'https://us.i.posthog.com',
+        autocapture: false,
+        capture_pageview: false,
+        capture_pageleave: false,
+        capture_performance: {
+            web_vitals: false,
+        },
+        rageclick: false,
+    })
+    window.shareKey = '2c2nvClbcOUKi0g6Iw6isg';
+    window.host = 'readdy.ai';
+</script>
+</body>
+</html>
